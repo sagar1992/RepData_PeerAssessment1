@@ -1,14 +1,5 @@
 # Reproducible Research: Peer Assessment 1
 
-## Student Information
-
-```r
-#Name  :Sagar Pathak
-#Email : surfer.sagar@gmail.com
-#Date  : 2015-12-18 
-#Desc  : Reproducible Research: Peer Assessment 1
-```
-
 ## Loading and preprocessing the data
 Load the activity data
 
@@ -49,7 +40,7 @@ Histogram
 hist(stepsDay_totals$total_steps, breaks=10, col="red", main="Histogram of total number of steps per day", xlab="Total number of steps in a day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
 Calculate and report the mean and median of the total number of steps taken per day
 
@@ -80,7 +71,7 @@ names(stepsInterval_mean) <- c("interval", "steps_mean")
 plot(stepsInterval_mean, type = "l", main="The average number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -200,7 +191,7 @@ head(step_tot)
 hist(step_tot$total_steps, breaks=10, col="red", main="Histogram of total number of steps per day", xlab="[Imputed] Total number of steps in a day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
 
 New mean and median are calculated. Missing values have got the impact on those parameters.
 
@@ -243,4 +234,4 @@ library(lattice)
 xyplot(steps ~ interval | day_type, stepsInt, type = "l", layout = c(1, 2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-16-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-15-1.png) 
